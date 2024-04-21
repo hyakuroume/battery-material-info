@@ -18,9 +18,13 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./work:/work
+      - c:\Users\User\Desktop\battery-material-info\work:/work
     ports:
       - "8888:8888"
+
+    links:
+      - postgres
+    
     depends_on:
       - postgres
 
