@@ -18,8 +18,12 @@ rm -f Anaconda3-2024.02-1-Linux-x86_64.sh
 ENV PATH /opt/Anaconda3/bin/:$PATH
 
 # RUN pip install  psycopg2-binary rdkit pymatgen ma
-RUN conda install -c  conda-forge -y pymatgen rdkit matminer mordred pydoe2 psycopg2-binary phonopy mp_api
-# physbo skopt gpyopt 
+RUN conda install -c  conda-forge -y pymatgen rdkit matminer mordred pydoe2 psycopg2-binary phonopy rdkit
+# physbo skopt gpyopt
+
+RUN pip install xenonpy deepchem
+
+# RUN conda install -c  conda-forge -y mp_api
 
 WORKDIR /
 
